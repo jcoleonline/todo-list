@@ -1,0 +1,87 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+body {
+    max-height: 100vh;
+    background: rgb(207, 205, 205);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: grey;
+    margin-top: 100px;
+
+}
+
+form {
+    margin-top: 25px;
+    background: white;
+    box-shadow: -3px 6px 4px black;
+}
+
+form input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+}
+
+form button {
+    width: 50px;
+    height: 40px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    font-size: small;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pending {
+    margin-top: 50px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+ul {
+    list-style: none;
+    width: 500px;
+}
+
+ul li {
+    width: 100%;
+    background: blue;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin: 5px;
+    color: white;
+    box-shadow: -3px 6px 4px black;
+    }
+
+ul li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    text-align: center;
+    background-color: blue;
+    font-size: small;
+}
+#checkbox{
+    margin-right: 50px;
+    margin-left: 15px;
+}

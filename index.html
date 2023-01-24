@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1>TODO List</h1>
+    <p>Enter Task</p>
+    <form>
+        <!-- <input type="checkbox"> -->
+        <input type="text" name="text" id="txt" placeholder='Complete the assignment' required>
+        <button type="submit" class="btn-list">Add</button>
+    </form>
+    <p id="pending">Pending</p>
+    <div class="container">
+        <ul>
+            <!-- <li><input type="checkbox" id="checkbox">Dev At<span>REMOVE</span></li>
+            <li><input type="checkbox" id="checkbox">Dev At<span>REMOVE</span></li>
+            <li><input type="checkbox" id="checkbox">Dev At<span>REMOVE</span></li>
+            <li><input type="checkbox" id="checkbox">Dev At<span>REMOVE</span></li>
+        </ul> -->
+    </div>
+    <script>
+        const inputText = document.querySelector('#txt');
+        const myButton = document.querySelector('.btn-list');
+        const list = document.querySelector('.container ul');
+        const checkbox = document.querySelector('input[type="checkbox"]');
+
+        myButton.addEventListener('click', (e)=>{
+            if(inputText.value != ""){
+                e.preventDefault();
+
+                        const myLi = document.createElement('li');
+                myLi.innerHTML = inputText.value;
+                list.appendChild(myLi);
+
+                const mySpan = document.createElement('span');
+                mySpan.innerHTML = 'REMOVE';
+                myLi.appendChild(mySpan);
+            }
+            const close = document.querySelectorAll('span');
+            for(let i=0; i<close.length; i++){
+                close[i].addEventListener('click', ()=>{
+                    close[i].parentElement.style.display = "none";
+                })
+            }
+
+            inputText.value = "";
+
+        });
+    </script>
+</body>
+
+</html>
